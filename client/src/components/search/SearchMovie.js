@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MovieDisplay from '../display/MovieDisplay';
 import Search from './Search';
 import axios from 'axios';
 
@@ -16,12 +17,20 @@ class SearchMovie extends Component {
 			.get(
 				`${baseURL}search/movie?api_key=${apiKey}&language=en-US&query=${searchValue}&page=1&include_adult=false`
 			)
-			.then(res => this.setState({ movies: res.data, completed: true }));
+			.then(res =>
+				this.setState({ movies: res.data.results, completed: true })
+			);
 		console.log(this.props);
 	};
 
 	render() {
-		return <Search search={this.searchForMovies} />;
+		return (
+			<div>
+				<Search search={this.searchForMovies} />; // TODO: Loop through
+				movie list and display each movie. Must be done after the axios
+				call is complete.
+			</div>
+		);
 	}
 }
 
