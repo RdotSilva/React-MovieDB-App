@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
 import './App.css';
 
 class App extends Component {
@@ -7,7 +8,7 @@ class App extends Component {
 		return (
 			<div>
 				<Navbar />
-				<h1>My React App</h1>
+				<Landing />
 			</div>
 		);
 	}
