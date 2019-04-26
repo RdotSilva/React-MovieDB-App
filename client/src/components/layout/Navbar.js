@@ -4,7 +4,7 @@ class Navbar extends Component {
 	render() {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-				<a className="navbar-brand" href="#">
+				<a className="navbar-brand" href="/">
 					The Movie Database
 				</a>
 				<button
@@ -23,13 +23,16 @@ class Navbar extends Component {
 					id="navbarNavAltMarkup"
 				>
 					<div className="navbar-nav">
-						<a className="nav-item nav-link active" href="#">
+						<a
+							className="nav-item nav-link active"
+							href="/searchmovie"
+						>
 							Movie <span className="sr-only">(current)</span>
 						</a>
-						<a className="nav-item nav-link" href="#">
+						<a className="nav-item nav-link" href="actor">
 							Actor
 						</a>
-						<a className="nav-item nav-link" href="#">
+						<a className="nav-item nav-link" href="topgrossing">
 							Top Grossing
 						</a>
 					</div>
