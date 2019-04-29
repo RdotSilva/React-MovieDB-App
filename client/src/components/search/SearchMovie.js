@@ -24,11 +24,18 @@ class SearchMovie extends Component {
 	};
 
 	render() {
+		const { movies } = this.state;
+
+		const movieList = movies.map(function(movie) {
+			return <MovieDisplay movie={movie} />;
+		});
+
 		return (
 			<div>
 				<Search search={this.searchForMovies} />; // TODO: Loop through
 				movie list and display each movie. Must be done after the axios
 				call is complete.
+				{movieList}
 			</div>
 		);
 	}
