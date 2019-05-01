@@ -54,7 +54,7 @@ class MovieDisplay extends Component {
 				<div className={styles['movie-info']}>
 					<h1 className={styles['movie-title']}>{movie.title}</h1>
 					<p className={styles['movie-release-date']}>
-						Release Date:{' '}
+						Release Date:
 						{movie.release_date.length > 0
 							? this.formatDate(movie.release_date)
 							: 'Unknown'}
