@@ -2,6 +2,31 @@ import React, { Component } from 'react';
 import styles from './MovieDisplay.module.css';
 
 class MovieDisplay extends Component {
+	formatDate = date => {
+		// Format date from 2018-10-03 to October 2, 2018
+		let newDate = new Date(date);
+		let monthNames = [
+			'January',
+			'February',
+			'March',
+			'April',
+			'May',
+			'June',
+			'July',
+			'August',
+			'September',
+			'October',
+			'November',
+			'December'
+		];
+
+		let day = newDate.getDate();
+		let monthIndex = newDate.getMonth();
+		let year = newDate.getFullYear();
+
+		return `${monthNames[monthIndex]} ${day}, ${year}`;
+	};
+
 	render() {
 		// Use deconstructor to pull movie from props
 		const { movie } = this.props;
@@ -29,7 +54,9 @@ class MovieDisplay extends Component {
 				</div>
 				<div className={styles['movie-info']}>
 					<h1 className={styles['movie-title']}>{movie.title}</h1>
-					<p className={styles['movie-release-date']}>{movie.date}</p>
+					<p className={styles['movie-release-date']}>
+						Release Date: {this.formatDate(movie.release_date)}
+					</p>
 					<p className={styles['movie-overview']}>{movie.overview}</p>
 				</div>
 			</div>
