@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './MovieDisplay.module.css';
+import noImageFound from '../../../src/img/noimage.jpg';
 
 class MovieDisplay extends Component {
 	formatDate = date => {
@@ -37,7 +38,7 @@ class MovieDisplay extends Component {
 			`${baseImgUrl}${movie.poster_path}` ===
 			'http://image.tmdb.org/t/p/w185/null'
 		) {
-			imageSource = '/noimage.jpg';
+			imageSource = noImageFound;
 		} else {
 			imageSource = `${baseImgUrl}${movie.poster_path}`;
 		}
