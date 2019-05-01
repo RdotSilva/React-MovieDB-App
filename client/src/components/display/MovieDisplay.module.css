@@ -1,0 +1,41 @@
+.movie-title {
+	font-size: 20px;
+}
+
+#movie-credit-header {
+	font-size: 20px;
+}
+
+.movie-info {
+	grid-column: 2 / 3;
+	padding: 5px;
+	color: #3b5e62;
+	background-color: #d8dde3;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	font-family: 'Lato', sans-serif;
+}
+
+.movie-overview {
+	font-size: 12px;
+}
+
+.movie-image-container {
+	display: auto;
+}
+
+.movie-image-container img {
+	display: flex;
+	border-top-left-radius: 21px;
+	border-bottom-left-radius: 21px;
+}
+
+.movie-border-box {
+	display: grid;
+	grid-template-columns: 186px auto;
+	grid-column: 1 / -1;
+	border: solid;
+	border-color: #755970;
+	border-radius: 25px;
+	margin: 2px;
+}
