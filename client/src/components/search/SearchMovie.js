@@ -34,9 +34,7 @@ class SearchMovie extends Component {
 
 		return (
 			<div>
-				<Search search={this.searchForMovies} />; // TODO: Loop through
-				movie list and display each movie. Must be done after the axios
-				call is complete.
+				<Search search={this.searchForMovies} />
 				{movieList}
 			</div>
 		);
