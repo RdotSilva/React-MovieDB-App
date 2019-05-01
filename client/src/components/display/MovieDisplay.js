@@ -3,6 +3,16 @@ import styles from './MovieDisplay.module.css';
 
 class MovieDisplay extends Component {
 	render() {
+		let imageSource;
+		if (
+			`${baseImgUrl}${e.poster_path}` ===
+			'http://image.tmdb.org/t/p/w185/null'
+		) {
+			imageSource = '/noimage.jpg';
+		} else {
+			imageSource = `${baseImgUrl}${e.poster_path}`;
+		}
+
 		return (
 			<div className="movie-border-box">
 				<div className="movie-image-container">
