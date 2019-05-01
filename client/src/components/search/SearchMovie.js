@@ -27,8 +27,10 @@ class SearchMovie extends Component {
 		const { movies } = this.state;
 
 		const movieList = movies.map(function(movie) {
-			return <MovieDisplay movie={movie} />;
+			return <MovieDisplay movie={movie} key={movie.id} />;
 		});
+
+		console.log(movies);
 
 		return (
 			<div>
