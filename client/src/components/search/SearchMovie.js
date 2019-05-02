@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import MovieDisplay from '../display/MovieDisplay';
 import Search from './Search';
 import axios from 'axios';
+import apiKey from '../../config_keys';
 
-const apiKey = '53d84fb2d3fffb38f67498a4522c2728';
 const baseURL = 'https://api.themoviedb.org/3/';
 
 class SearchMovie extends Component {
