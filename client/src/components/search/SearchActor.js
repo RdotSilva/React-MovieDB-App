@@ -5,3 +5,11 @@ import axios from 'axios';
 import apiKey from '../../config_keys';
 
 const baseURL = 'https://api.themoviedb.org/3/';
+
+class SearchActor extends Component {
+	render() {
+		return <div />;
+	}
+}
+
+export default SearchActor;
