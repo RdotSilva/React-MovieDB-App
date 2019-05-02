@@ -7,6 +7,10 @@ import apiKey from '../../config_keys';
 const baseURL = 'https://api.themoviedb.org/3/';
 
 class SearchActor extends Component {
+	state = {
+		actorId: []
+	};
+
 	searchPerson = async searchValue => {
 		// Search for person. This will give access to ID of person.
 		const response = await axios
@@ -18,7 +22,11 @@ class SearchActor extends Component {
 	};
 
 	render() {
-		return <div />;
+		return (
+			<div>
+				<Search search={this.searchPerson} />
+			</div>
+		);
 	}
 }
 
