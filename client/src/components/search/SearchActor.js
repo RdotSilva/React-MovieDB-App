@@ -17,15 +17,13 @@ class SearchActor extends Component {
 			.get(
 				`${baseURL}search/person?api_key=${apiKey}&query=${searchValue}`
 			)
-			.then(res => this.setState({ actorId: res.data.results }));
+			.then(res => this.setState({ actorId: res.data.results[0].id }));
 		console.log(this.state);
 	};
 
 	render() {
-		const test = 'testing';
 		return (
 			<div>
-				{test}
 				<Search search={this.searchPerson} />
 			</div>
 		);
