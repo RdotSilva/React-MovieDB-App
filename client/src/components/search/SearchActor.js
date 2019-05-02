@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MovieDisplay from '../display/MovieDisplay';
+// import ActorDisplay from '../display/ActorDisplay';
 import Search from './Search';
 import axios from 'axios';
 import apiKey from '../../config_keys';
@@ -13,7 +13,7 @@ class SearchActor extends Component {
 
 	searchPerson = async searchValue => {
 		// Search for person. This will give access to ID of person.
-		const response = await axios
+		await axios
 			.get(
 				`${baseURL}search/person?api_key=${apiKey}&query=${searchValue}`
 			)
@@ -22,8 +22,10 @@ class SearchActor extends Component {
 	};
 
 	render() {
+		const test = 'testing';
 		return (
 			<div>
+				{test}
 				<Search search={this.searchPerson} />
 			</div>
 		);

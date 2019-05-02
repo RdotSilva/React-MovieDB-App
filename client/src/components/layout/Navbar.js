@@ -29,10 +29,13 @@ class Navbar extends Component {
 						>
 							Movie <span className="sr-only">(current)</span>
 						</a>
-						<a className="nav-item nav-link" href="actor">
+						<a className="nav-item nav-link" href="/searchactor">
 							Actor
 						</a>
-						<a className="nav-item nav-link" href="topgrossing">
+						<a
+							className="nav-item nav-link"
+							href="/searchtopgrossing"
+						>
 							Top Grossing
 						</a>
 					</div>
