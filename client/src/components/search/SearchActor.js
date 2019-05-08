@@ -22,7 +22,6 @@ class SearchActor extends Component {
 			)
 			.then(res => this.setState({ actorId: res.data.results[0].id }))
 			.catch(err => console.log(err));
-		console.log(this.state);
 	};
 
 	getPersonDetails = async () => {
@@ -33,7 +32,6 @@ class SearchActor extends Component {
 				}?api_key=${apiKey}&language=en-US`
 			)
 			.then(res => this.setState({ actorDetails: res.data }));
-		console.log(this.state);
 	};
 
 	showPersonDetails = searchValue => {
@@ -52,9 +50,13 @@ class SearchActor extends Component {
 				}/movie_credits?api_key=${apiKey}&language=en-US`
 			)
 			.then(movies => {
-				this.setState({ allMovieCredits: movies.data });
+				let movieCredits = [];
+				// Get first 8 movie credits for actor
+				for (let i = 0; i <= 7; i++) {
+					movieCredits.push(movies.data.cast[i]);
+				}
+				this.setState({ eightMovieCredits: movieCredits });
 			});
-		console.log(this.state);
 	};
 
 	render() {
