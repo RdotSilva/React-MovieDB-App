@@ -19,7 +19,25 @@ class ActorDisplay extends Component {
 			imageSource = `${baseImgUrl}${movie.poster_path}`;
 		}
 
-		return <div />;
+		return (
+            <div className="actor-border-box">
+                <div className="actor-image-container">
+                        <img className="actor-image" src="${imageSource}">
+                </div>
+                <div className="actor-info">
+                    <h1 className="actor-title">{actor.name}</h1>
+                    <p className="actor-birthday">Born on: {/*this.formatDate*/(actor.birthday)}</p>
+                    <a href="https://www.imdb.com/name/${actor.imdb_id}/">IMDB</a>
+                </div>
+                <div id="actor-movie-credits">
+                    <ul id="actor-movie-credits-list">
+                    </ul>   
+                </div>
+                <div className="actor-bio">
+                    <p className="actor-bio-text">{actor.biography}</p>
+                </div>
+            </div>
+        );
 	}
 }
 
