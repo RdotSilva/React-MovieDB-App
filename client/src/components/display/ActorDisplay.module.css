@@ -21,3 +21,16 @@
 	border-top-right-radius: 21px;
 	border-bottom-left-radius: 5px;
 }
+
+.actor-info {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	margin: 10px;
+}
+
+.actor-movie-credits {
+	display: flex;
+	flex-direction: column;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
