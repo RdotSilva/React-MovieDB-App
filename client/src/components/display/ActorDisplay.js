@@ -29,9 +29,13 @@ class ActorDisplay extends Component {
 				<div className={styles['actor-info']}>
 					<h1 className={styles['actor-title']}>{actor.name}</h1>
 					<p className={styles['actor-birthday']}>{actor.birthday}</p>
-					<a href={`https://www.imdb.com/name/${actor.imdb_id}/`}>
-						IMDB
-					</a>
+					{actor.imdb_id !== undefined ? (
+						<a href={`https://www.imdb.com/name/${actor.imdb_id}/`}>
+							IMDB
+						</a>
+					) : (
+						<a />
+					)}
 				</div>
 				<div className={styles['actor-movie-credits']}>
 					<ul className={styles['actor-movie-credits-list']} />
