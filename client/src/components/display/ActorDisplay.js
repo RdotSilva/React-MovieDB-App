@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './ActorDisplay.module.css';
 import noImageFound from '../../../src/img/noimage.jpg';
+import { Link } from 'react-router-dom';
 
 class ActorDisplay extends Component {
 	render() {
@@ -29,9 +30,9 @@ class ActorDisplay extends Component {
 				<div className={styles['actor-info']}>
 					<h1 className={styles['actor-title']}>{actor.name}</h1>
 					<p className={styles['actor-birthday']}>{actor.birthday}</p>
-					<a
+					<Link
+						to={`https://www.imdb.com/name/${actor.imdb_id}/`}
 						className={styles['imdb-link']}
-						href={`https://www.imdb.com/name/${actor.imdb_id}/`}
 					/>
 				</div>
 				<div className={styles['actor-movie-credits']}>
