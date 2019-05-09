@@ -9,3 +9,15 @@
 	color: #3b5e62;
 	background-color: #d8dde3;
 }
+
+.actor-image-container {
+	display: grid;
+	grid-column: 3 / -1;
+	justify-content: end;
+}
+
+.actor-image-container img {
+	display: flex;
+	border-top-right-radius: 21px;
+	border-bottom-left-radius: 5px;
+}
