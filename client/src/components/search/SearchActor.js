@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import ActorDisplay from '../display/ActorDisplay';
+import ActorDisplay from '../display/ActorDisplay';
 import Search from './Search';
 import axios from 'axios';
 import apiKey from '../../config_keys';
@@ -63,6 +63,7 @@ class SearchActor extends Component {
 		return (
 			<div>
 				<Search search={this.showPersonDetails} />
+				<ActorDisplay actor={this.props.actorDetails} />
 			</div>
 		);
 	}
