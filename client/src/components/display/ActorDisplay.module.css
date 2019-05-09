@@ -34,3 +34,16 @@
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
 }
+
+.actor-movie-credits-list {
+	list-style-type: none;
+}
+
+.actor-movie-credits-list li {
+	padding: 3px;
+}
+
+.actor-bio {
+	grid-column: 1 / -1;
+	margin: 10px;
+}
