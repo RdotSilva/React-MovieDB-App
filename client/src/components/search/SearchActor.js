@@ -9,7 +9,7 @@ const baseURL = 'https://api.themoviedb.org/3/';
 class SearchActor extends Component {
 	state = {
 		actorId: [],
-		actorDetails: [],
+		actor: [],
 		allMovieCredits: [],
 		eightMovieCredits: []
 	};
@@ -31,7 +31,7 @@ class SearchActor extends Component {
 					this.state.actorId
 				}?api_key=${apiKey}&language=en-US`
 			)
-			.then(res => this.setState({ actorDetails: res.data }));
+			.then(res => this.setState({ actor: res.data }));
 	};
 
 	showPersonDetails = searchValue => {
@@ -63,7 +63,8 @@ class SearchActor extends Component {
 		return (
 			<div>
 				<Search search={this.showPersonDetails} />
-				<ActorDisplay actor={this.props.actorDetails} />
+				{console.log(this.state.actor)}
+				<ActorDisplay actor={this.state.actor} />
 			</div>
 		);
 	}
