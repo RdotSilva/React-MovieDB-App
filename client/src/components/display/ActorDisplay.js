@@ -4,8 +4,14 @@ import noImageFound from "../../../src/img/noimage.jpg";
 import ActorCreditDisplay from "./ActorCreditDisplay";
 
 class ActorDisplay extends Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		const { actor } = this.props;
+		const { actorCredits } = this.props;
+
 		let baseImgUrl = "http://image.tmdb.org/t/p/w185/";
 		let imageSource;
 
@@ -39,9 +45,7 @@ class ActorDisplay extends Component {
 					)}
 				</div>
 				<div className={styles["actor-movie-credits"]}>
-					<ul className={styles["actor-movie-credits-list"]}>
-						<ActorCreditDisplay actor={actor} />
-					</ul>
+					<ul className={styles["actor-movie-credits-list"]}>{}</ul>
 				</div>
 				<div className={styles["actor-bio"]}>
 					<p className={styles["actor-bio-text"]}>

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import ActorDisplay from '../display/ActorDisplay';
-import Search from './Search';
-import axios from 'axios';
-import apiKey from '../../config_keys';
+import React, { Component } from "react";
+import ActorDisplay from "../display/ActorDisplay";
+import Search from "./Search";
+import axios from "axios";
+import apiKey from "../../config_keys";
 
-const baseURL = 'https://api.themoviedb.org/3/';
+const baseURL = "https://api.themoviedb.org/3/";
 
 class SearchActor extends Component {
 	state = {
@@ -63,8 +63,11 @@ class SearchActor extends Component {
 		return (
 			<div>
 				<Search search={this.showPersonDetails} />
-				{console.log(this.state.actor)}
-				<ActorDisplay actor={this.state.actor} />
+				{console.log(this.state.eightMovieCredits)}
+				<ActorDisplay
+					actor={this.state.actor}
+					actorCredits={this.state.eightMovieCredits}
+				/>
 			</div>
 		);
 	}
