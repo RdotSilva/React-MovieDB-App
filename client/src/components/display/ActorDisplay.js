@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./ActorDisplay.module.css";
 import noImageFound from "../../../src/img/noimage.jpg";
+import ActorCreditDisplay from "./ActorCreditDisplay";
 
 class ActorDisplay extends Component {
 	render() {
@@ -38,7 +39,9 @@ class ActorDisplay extends Component {
 					)}
 				</div>
 				<div className={styles["actor-movie-credits"]}>
-					<ul className={styles["actor-movie-credits-list"]} />
+					<ul className={styles["actor-movie-credits-list"]}>
+						<ActorCreditDisplay actor={actor} />
+					</ul>
 				</div>
 				<div className={styles["actor-bio"]}>
 					<p className={styles["actor-bio-text"]}>
