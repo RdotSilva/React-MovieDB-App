@@ -1,0 +1,49 @@
+.actor-border-box {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto;
+	grid-column: 1 / -1;
+	border: solid;
+	border-color: #755970;
+	border-radius: 25px;
+	color: #3b5e62;
+	background-color: #d8dde3;
+}
+
+.actor-image-container {
+	display: grid;
+	grid-column: 3 / -1;
+	justify-content: end;
+}
+
+.actor-image-container img {
+	display: flex;
+	border-top-right-radius: 21px;
+	border-bottom-left-radius: 5px;
+}
+
+.actor-info {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	margin: 10px;
+}
+
+.actor-movie-credits {
+	display: flex;
+	flex-direction: column;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+.actor-movie-credits-list {
+	list-style-type: none;
+}
+
+.actor-movie-credits-list li {
+	padding: 3px;
+}
+
+.actor-bio {
+	grid-column: 1 / -1;
+	margin: 10px;
+}
